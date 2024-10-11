@@ -1,0 +1,23 @@
+{
+  "routerMap": [
+    {
+      "name": "PageA",
+      "pageSourceFile": "src/main/ets/generated/HMpageA76873586.ets",
+      "buildFunction": "pageABuilder",
+      "customData": {
+        "pageUrl": "PageA",
+        "name": "pageA"
+      }
+    },
+    {
+      "name": "PageB",
+      "pageSourceFile": "src/main/ets/generated/HMPageB76873587.ets",
+      "buildFunction": "PageBBuilder",
+      "customData": {
+        "pageUrl": "PageB",
+        "singleton": true,
+        "name": "PageB"
+      }
+    }
+  ]
+}
