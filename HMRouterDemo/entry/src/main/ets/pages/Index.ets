@@ -7,33 +7,41 @@ struct Index {
   modifier: NavModifier = new NavModifier ()
 
   build () {
-    Column () {
+    Column ({space: 20}) {
       HMNavigation ({
         navigationId: 'contentID' ,
-        // homePageUrl:'PageA',
+        homePageUrl: 'PageA' ,
         options: {
           modifier: this.modifier
         }
       }) {
-        Text ('玉面飞龙之王')
-          .fontSize (50)
-        Button ('跳转到我的主页').onClick ((event: ClickEvent) => {
-          HMRouterMgr.push ({
-            pageUrl: 'PageB' ,
-            param: new UserInfo ()
-          } , {
-            onResult (popInfo: HMPopInfo) {
-              const popName = popInfo.srcPageInfo.name
-              console.log (JSON.stringify (popName))
-              const popParam = popInfo.srcPageInfo.param
-              console.log (JSON.stringify (popParam))
-              const result = popInfo.result
-              console.log (JSON.stringify (result))
+        Column ({space: 10}){
+          Text ('飞龙')
+            .fontSize (50)
+          Button ('跳转到我的主页').onClick ((event: ClickEvent) => {
+            HMRouterMgr.push ({
+              pageUrl: 'PageB' ,
+              param: new UserInfo ()
+            } , {
+              onResult (popInfo: HMPopInfo) {
+                const popName = popInfo.srcPageInfo.name
+                console.log (JSON.stringify (popName))
+                const popParam = popInfo.srcPageInfo.param
+                console.log (JSON.stringify (popParam))
+                const result = popInfo.result
+                console.log (JSON.stringify (result))
 
-            }
+              }
+            })
           })
-        })
-        .fontSize (30)
+            .fontSize (20)
+          Button ('弹框').onClick ((event: ClickEvent) => {
+            HMRouterMgr.push ({
+              pageUrl: 'DialogPage'
+            })
+          })
+        }
+
       }
     }
   }
@@ -42,7 +50,7 @@ struct Index {
 class NavModifier extends AttributeUpdater<NavigationAttribute> {
   initializeModifier (instance: NavigationAttribute): void {
     instance.mode (NavigationMode.Stack)
-    instance.navBarWidth ('100%')
+    instance.navBarWidth ('50%')
     instance.hideTitleBar (true)
     instance.hideToolBar (true)
     // super.initializeModifier (instance)
@@ -50,6 +58,6 @@ class NavModifier extends AttributeUpdater<NavigationAttribute> {
 }
 
 export class UserInfo {
-  name: string = '我是用户名'
+  name: string = '飞龙'
   password: string = '111'
 }

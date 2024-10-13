@@ -13,27 +13,27 @@
  * limitations under the License.
  */
 
-// auto-generated pageABuilder.ets by HMRouter
-import { pageA } from '../views/PageA'
+// auto-generated DialogPageBuilder.ets by HMRouter
+import { DialogPage } from '../commons/DialogPage'
 import { TemplateService, TranslateOption, ScaleOption, OpacityOption } from '@hadss/hmrouter'
 
 @Builder
-export function pageABuilder(name: string, param: Object) {
-  pageAGenerated()
+export function DialogPageBuilder(name: string, param: Object) {
+  DialogPageGenerated()
 }
 
 @Component
-export struct pageAGenerated {
+export struct DialogPageGenerated {
   @State translateOption: TranslateOption = new TranslateOption()
   @State scaleOption: ScaleOption = new ScaleOption()
   @State opacityOption: OpacityOption = new OpacityOption()
-  private pageUrl: string = 'PageA'
+  private pageUrl: string = 'DialogPage'
   private ndId: string = ''
   private navigationId: string = ''
 
   aboutToAppear(): void {
     this.navigationId = this.queryNavigationInfo()!.navigationId;
-    TemplateService.aboutToAppear(this.navigationId, this.pageUrl, false,
+    TemplateService.aboutToAppear(this.navigationId, this.pageUrl, true,
       this.translateOption, this.scaleOption, this.opacityOption)
   }
 
@@ -43,9 +43,9 @@ export struct pageAGenerated {
 
   build() {
     NavDestination() {
-      pageA()
+      DialogPage()
     }
-    
+    .mode(NavDestinationMode.DIALOG)
     .hideTitleBar(true)
     .hitTestBehavior(HitTestMode.Transparent)
     .gesture(PanGesture()

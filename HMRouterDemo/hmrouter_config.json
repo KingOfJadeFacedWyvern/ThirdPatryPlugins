@@ -1,4 +1,9 @@
 {
-  "scanDir": ["src/main/ets/components","src/main/ets/interceptors","src/main/ets/views"],
+  "scanDir": [
+    "src/main/ets/components",
+    "src/main/ets/interceptors",
+    "src/main/ets/views",
+    "src/main/ets/commons"
+  ],
   "saveGeneratedFile": true
 }

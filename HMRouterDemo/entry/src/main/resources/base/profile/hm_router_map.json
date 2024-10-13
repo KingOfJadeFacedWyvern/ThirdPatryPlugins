@@ -6,6 +6,7 @@
       "buildFunction": "pageABuilder",
       "customData": {
         "pageUrl": "PageA",
+        "lifecycle": "PageLifecycle",
         "name": "pageA"
       }
     },
@@ -17,6 +18,25 @@
         "pageUrl": "PageB",
         "singleton": true,
         "name": "PageB"
+      }
+    },
+    {
+      "name": "DialogPage",
+      "pageSourceFile": "src/main/ets/generated/HMDialogPage608291863.ets",
+      "buildFunction": "DialogPageBuilder",
+      "customData": {
+        "pageUrl": "DialogPage",
+        "dialog": true,
+        "name": "DialogPage"
+      }
+    },
+    {
+      "name": "__lifecycle__PageLifecycle",
+      "pageSourceFile": "src/main/ets/commons/PageLifecycle.ets",
+      "buildFunction": "",
+      "customData": {
+        "lifecycleName": "PageLifecycle",
+        "name": "PageLifecycle"
       }
     }
   ]

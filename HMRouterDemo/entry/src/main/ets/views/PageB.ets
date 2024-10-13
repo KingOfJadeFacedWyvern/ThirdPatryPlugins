@@ -16,16 +16,16 @@ export struct PageB {
       Text('PageB')
         .fontSize(50)
       Text(`用户名:${this.param.name}`)
-              .fontSize(35)
+              .fontSize(20)
       Text(`密码:${this.param.password}`)
-              .fontSize(35)
+              .fontSize(20)
       Button ('返回主页').onClick ((event: ClickEvent) => {
         HMRouterMgr.pop({
           // pageUrl:'PageA'
           param:'1111'
         })
       })
-        .fontSize(30)
+        .fontSize(20)
     }
   }
 }

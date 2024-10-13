@@ -13,17 +13,17 @@
  * limitations under the License.
  */
 
-// auto-generated pageABuilder.ets by HMRouter
-import { pageA } from '../views/PageA'
+// auto-generated ageABuilder.ets by HMRouter
+import { ageA } from '../views/PageA'
 import { TemplateService, TranslateOption, ScaleOption, OpacityOption } from '@hadss/hmrouter'
 
 @Builder
-export function pageABuilder(name: string, param: Object) {
-  pageAGenerated()
+export function ageABuilder(name: string, param: Object) {
+  ageAGenerated()
 }
 
 @Component
-export struct pageAGenerated {
+export struct ageAGenerated {
   @State translateOption: TranslateOption = new TranslateOption()
   @State scaleOption: ScaleOption = new ScaleOption()
   @State opacityOption: OpacityOption = new OpacityOption()
@@ -43,7 +43,7 @@ export struct pageAGenerated {
 
   build() {
     NavDestination() {
-      pageA()
+      ageA()
     }
     
     .hideTitleBar(true)
