@@ -1,5 +1,6 @@
-import { HMNavigation , HMPopInfo , HMRouterMgr } from '@hadss/hmrouter'
+import { HMDefaultGlobalAnimator , HMNavigation , HMPopInfo , HMRouterMgr } from '@hadss/hmrouter'
 import { AttributeUpdater } from '@kit.ArkUI'
+import { globalDialogEffectPage , globalTransitionEffectPage } from '../commons/GlobalAnimatorPage'
 
 @Entry
 @Component
@@ -7,15 +8,24 @@ struct Index {
   modifier: NavModifier = new NavModifier ()
 
   build () {
-    Column ({space: 20}) {
+    Column ({ space: 20 }) {
       HMNavigation ({
         navigationId: 'contentID' ,
-        homePageUrl: 'PageA' ,
+        // homePageUrl: 'PageA' ,
         options: {
-          modifier: this.modifier
+          modifier: this.modifier ,
+          // 全局动画效果 ↓
+          standardAnimator: globalTransitionEffectPage ,
+          dialogAnimator: globalDialogEffectPage
+          //   全局动画效果 ↑
         }
       }) {
-        Column ({space: 10}){
+        Column ({ space: 10 }) {
+          Button ('跳转到PageA').onClick ((event: ClickEvent) => {
+            HMRouterMgr.push ({
+              pageUrl: 'PageA'
+            })
+          })
           Text ('飞龙')
             .fontSize (50)
           Button ('跳转到我的主页').onClick ((event: ClickEvent) => {

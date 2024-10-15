@@ -1,6 +1,15 @@
 {
   "routerMap": [
     {
+      "name": "LoginPage",
+      "pageSourceFile": "src/main/ets/generated/HMLoginPage284559736.ets",
+      "buildFunction": "LoginPageBuilder",
+      "customData": {
+        "pageUrl": "LoginPage",
+        "name": "LoginPage"
+      }
+    },
+    {
       "name": "PageA",
       "pageSourceFile": "src/main/ets/generated/HMpageA76873586.ets",
       "buildFunction": "pageABuilder",
@@ -18,6 +27,25 @@
         "pageUrl": "PageB",
         "singleton": true,
         "name": "PageB"
+      }
+    },
+    {
+      "name": "__interceptor__CommonInterception",
+      "pageSourceFile": "src/main/ets/commons/CommonInterception.ets",
+      "buildFunction": "",
+      "customData": {
+        "interceptorName": "CommonInterception",
+        "global": true,
+        "name": "CommonInterception"
+      }
+    },
+    {
+      "name": "__interceptor__CustomInterception",
+      "pageSourceFile": "src/main/ets/commons/CustomInterception.ets",
+      "buildFunction": "",
+      "customData": {
+        "interceptorName": "CustomInterception",
+        "name": "CustomInterception"
       }
     },
     {

@@ -1,13 +1,17 @@
 import { HMRouter , HMRouterMgr } from '@hadss/hmrouter'
 //@HMRouter ({lifecycle: 'PageLifecycle' })这个属性是生命周期监听，可以监听到页面的生命周期
-@HMRouter ({ pageUrl: 'PageA' , lifecycle: 'PageLifecycle' })
+@HMRouter ({
+  pageUrl: 'PageA' ,
+  lifecycle: 'PageLifecycle' ,
+  // interceptors:['CustomInterception']
+})
 @Component
 export struct pageA {
-  // aboutToAppear (): void {
-  //   HMRouterMgr.push ({
-  //     pageUrl: 'DialogPage' ,//弹框页面
-  //   })
-  // }
+  aboutToAppear (): void {
+    HMRouterMgr.push ({
+      pageUrl: 'DialogPage' ,//弹框页面
+    })
+  }
 
   build () {
     Column () {
