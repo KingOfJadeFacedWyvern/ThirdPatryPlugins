@@ -1,7 +1,7 @@
 import { HMRouter , HMRouterMgr } from '@hadss/hmrouter'
 import { UserInfo } from '../pages/Index'
 
-@HMRouter({pageUrl:'PageB',singleton:true})
+@HMRouter({pageUrl:'PageB',singleton:true,animator:'CustomAnimator'})
 @Component
 export struct PageB {
   @State param: UserInfo = {} as UserInfo

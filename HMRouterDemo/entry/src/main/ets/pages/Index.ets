@@ -1,5 +1,6 @@
 import { HMDefaultGlobalAnimator , HMNavigation , HMPopInfo , HMRouterMgr } from '@hadss/hmrouter'
 import { AttributeUpdater } from '@kit.ArkUI'
+import { CustomAnimator } from '../commons/CustomAnimator'
 import { globalDialogEffectPage , globalTransitionEffectPage } from '../commons/GlobalAnimatorPage'
 
 @Entry
@@ -31,7 +32,8 @@ struct Index {
           Button ('跳转到我的主页').onClick ((event: ClickEvent) => {
             HMRouterMgr.push ({
               pageUrl: 'PageB' ,
-              param: new UserInfo ()
+              param: new UserInfo (),
+              // animator: new CustomAnimator ()
             } , {
               onResult (popInfo: HMPopInfo) {
                 const popName = popInfo.srcPageInfo.name

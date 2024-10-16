@@ -26,6 +26,7 @@
       "customData": {
         "pageUrl": "PageB",
         "singleton": true,
+        "animator": "CustomAnimator",
         "name": "PageB"
       }
     },
@@ -37,6 +38,15 @@
         "interceptorName": "CommonInterception",
         "global": true,
         "name": "CommonInterception"
+      }
+    },
+    {
+      "name": "__animator__CustomAnimator",
+      "pageSourceFile": "src/main/ets/commons/CustomAnimator.ets",
+      "buildFunction": "",
+      "customData": {
+        "animatorName": "CustomAnimator",
+        "name": "CustomAnimator"
       }
     },
     {

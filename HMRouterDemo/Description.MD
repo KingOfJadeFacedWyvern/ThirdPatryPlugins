@@ -1,3 +1,11 @@
+自定义转场动画+交互动画
+		文件夹：commons
+				创建文件：CustomAnimator.ets
+		文件夹：views
+				修改文件：PageB.ets
+						@HMRouter({pageUrl:'PageB',singleton:true,animator:'CustomAnimator'}) 增加一个animator:'CustomAnimator'
+
+2024年10月16日 11:09:54
 HMRouter拦截器+全局转场动效	
 		有笔记
 		文件夹：commons
